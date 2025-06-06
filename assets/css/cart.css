@@ -1,0 +1,230 @@
+/* === GENERAL PAGE STYLING === */
+body {
+  background-color: #f8fbff;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0.5rem 0.5rem;
+  box-sizing: border-box;
+}
+
+/* === CONTAINER === */
+.cart {
+  display: flex;
+  flex-direction: row;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem 2.5%;
+  gap: 2.5%;
+  box-sizing: border-box;
+}
+
+/* === TITLE === */
+.cart-header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.cart-header h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* === LEFT SIDE: CART ITEMS === */
+.cart-items {
+  flex: none;
+  width: 70%;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+}
+
+/* === INDIVIDUAL CART ITEM === */
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+  padding: 1.5rem 0;
+  gap: 1rem;
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+.cart-item-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  background-color: #eee;
+  background-size: cover;
+  background-position: center;
+}
+
+.cart-item-details {
+  flex: 2;
+}
+
+.cart-item-details h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.cart-item-details p {
+  margin: 0.2rem 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.cart-item-price {
+  font-weight: bold;
+  color: #5A827E;
+}
+
+/* === QUANTITY CONTROLS === */
+.cart-item-quantity {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cart-item-quantity button {
+  width: 30px;
+  height: 30px;
+  background-color: #5A827E;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.cart-item-quantity input {
+  width: 40px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0.3rem;
+}
+
+
+/* === REMOVE BUTTON === */
+.remove-item {
+  display: block;
+  margin-top: 8px;
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.85rem;
+  transition: background-color 0.2s ease;
+}
+
+.remove-item:hover {
+  background-color: #c9302c;
+}
+
+
+/* === RIGHT SIDE: ORDER SUMMARY === */
+.order-summary {
+  flex: none;
+  width: 25%;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  height: fit-content;
+  box-sizing: border-box;
+}
+
+.order-summary h2 {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.summary-items {
+  margin-bottom: 1rem;
+}
+
+.summary-totals p {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.summary-totals strong {
+  font-size: 1.1rem;
+}
+
+/* === PROMO CODE INPUT === */
+.promo-code {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.promo-code input {
+  flex: 1;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 0.9rem;
+}
+
+.promo-code button {
+  padding: 0.5rem 1rem;
+  background-color: #5A827E;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* === CHECKOUT BUTTON === */
+.checkout-btn {
+  display: block;
+  margin-top: 1.5rem;
+  width: 100%;
+  background-color: #5A827E;
+  color: white;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.checkout-btn:hover {
+  background-color: #476a61;
+}
+
+/* === EMPTY CART === */
+.empty-cart {
+  text-align: center;
+  padding: 3rem;
+  font-size: 1.1rem;
+  color: #666;
+}

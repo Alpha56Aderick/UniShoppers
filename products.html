@@ -1,0 +1,61 @@
+<!-- products.html - Sample HTML content -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>All Products - University Supplies</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/products.css" />
+</head>
+<body>
+    <header>
+        <div class="logo">UniSupplies</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="products">
+            <h1>All Products</h1>
+            <div class="filters">
+                <form id="category-filter-form">
+                    <input type="radio" id="cat-all" name="category" value="all" checked />
+                    <label for="cat-all">All Categories</label>
+                    <input type="radio" id="cat-software" name="category" value="software" />
+                    <label for="cat-software">Software</label>
+                    <input type="radio" id="cat-workshop-tools" name="category" value="workshop-tools" />
+                    <label for="cat-workshop-tools">Workshop Tools</label>
+                    <input type="radio" id="cat-lab-requirements" name="category" value="lab-requirements" />
+                    <label for="cat-lab-requirements">Lab Requirements</label>
+                    <input type="radio" id="cat-electronic-tools" name="category" value="electronic-tools" />
+                    <label for="cat-electronic-tools">Electronic Tools</label>
+                    <input type="radio" id="cat-computers" name="category" value="computers" />
+                    <label for="cat-computers">Computers</label>
+                    <input type="radio" id="cat-safety-gear" name="category" value="safety-gear" />
+                    <label for="cat-safety-gear">Safety Gear</label>
+                    <input type="radio" id="cat-reference-materials" name="category" value="reference-materials" />
+                    <label for="cat-reference-materials">Reference Materials</label>
+                </form>
+            </div>
+            <div class="product-grid">
+                <!-- Products will be loaded via JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 University Supplies. All rights reserved.</p>
+    </footer>
+
+    <script src="assets/js/products.js"></script>
+    <script src="assets/js/cart.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
