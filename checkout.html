@@ -1,96 +1,88 @@
-<!-- checkout.html - Sample HTML content -->
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout - University Supplies</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/checkout.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Checkout - UniSupplies</title>
+  <link rel="stylesheet" href="assets/css/checkout.css" />
+  
 </head>
 <body>
-    <header>
-        <div class="logo">UniSupplies</div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="cart.html">Cart</a></li>
-                <li><a href="login.html">Login</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <section class="checkout">
-            <h1>Checkout</h1>
-            <div class="checkout-container">
-                <div class="shipping-info">
-                    <h2>Shipping Information</h2>
-                    <form id="shipping-form">
-                        <div class="form-group">
-                            <label for="full-name">Full Name</label>
-                            <input type="text" id="full-name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="address">Address</label>
-                            <input type="text" id="address" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="city">City</label>
-                            <input type="text" id="city" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="zip">Zip Code</label>
-                            <input type="text" id="zip" required>
-                        </div>
-                    </form>
-                </div>
+  <main class="checkout">
+    <!-- 🧾 DELIVERY INFO -->
+    <section class="checkout-form">
+      <h2>Delivery Information</h2>
+      <form id="shipping-form">
+        <input type="text" name="fullname" placeholder="Full Name" required>
+        <input type="tel" name="phone" placeholder="Phone Number" required>
+        <input type="email" name="email" placeholder="Email " required>
+        <input type="text" name="address" placeholder="Delivery Address" required>
+        <select name="region" required>
+          <option value="">Select Region</option>
+          <option value="dar">Dar es Salaam</option>
+          <option value="arusha">Arusha</option>
+          <option value="dodoma">Dodoma</option>
+          <option value="mbeya">Mbeya</option>
+        </select>
 
-                <div class="payment-info">
-                    <h2>Payment Information</h2>
-                    <form id="payment-form">
-                        <div class="form-group">
-                            <label for="card-name">Name on Card</label>
-                            <input type="text" id="card-name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="card-number">Card Number</label>
-                            <input type="text" id="card-number" required>
-                        </div>
-                        <div class="form-group-row">
-                            <div class="form-group">
-                                <label for="expiry">Expiry Date</label>
-                                <input type="text" id="expiry" placeholder="MM/YY" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="cvv">CVV</label>
-                                <input type="text" id="cvv" required>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
+        <h3>Payment Method</h3>
+        <div class="payment-options">
+          <button type="button" class="payment-btn" data-method="mpesa">M-Pesa</button>
+          <button type="button" class="payment-btn" data-method="tigopesa">Tigo Pesa</button>
+          <button type="button" class="payment-btn" data-method="airtelmoney">Airtel Money</button>
+          <button type="button" class="payment-btn" data-method="paypal">PayPal</button>
+        </div>
+        <input type="hidden" name="payment" id="selected-payment" required />
+      </form>
+    </section>
 
-            <div class="order-summary">
-                <h2>Order Summary</h2>
-                <div class="summary-items">
-                    <!-- Order items will be loaded via JavaScript -->
-                </div>
-                <div class="summary-total">
-                    <p>Subtotal: <span id="checkout-subtotal">$0.00</span></p>
-                    <p>Shipping: <span id="checkout-shipping">$5.00</span></p>
-                    <p class="total">Total: <span id="checkout-total">$5.00</span></p>
-                </div>
-                <button id="place-order" class="btn">Place Order</button>
-            </div>
-        </section>
-    </main>
+    <!-- 📦 ORDER SUMMARY -->
+    <section class="checkout-summary">
+      <h2>Order Summary</h2>
+      <div class="summary-items"></div>
+      <div class="summary-totals">
+        <p>Subtotal: <span id="checkout-subtotal">$0.00</span></p>
+        <p>Shipping: <span id="checkout-shipping">$5.00</span></p>
+        <p><strong>Total:</strong> <strong id="checkout-total">$0.00</strong></p>
+      </div>
 
-    <footer>
-        <p>&copy; 2025 University Supplies. All rights reserved.</p>
-    </footer>
+      <button id="place-order" type="submit">Place Order</button>
+    </section>
+  </main>
 
-    <script src="assets/js/cart.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Payment method toggle buttons
+      const paymentButtons = document.querySelectorAll('.payment-btn');
+      const paymentInput = document.getElementById('selected-payment');
+
+      paymentButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          paymentButtons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          paymentInput.value = btn.dataset.method;
+        });
+      });
+
+      // Handle placing order
+      document.getElementById('place-order').addEventListener('click', () => {
+        const form = document.getElementById('shipping-form');
+        if (!form.checkValidity()) {
+          alert('Please fill out all required delivery and payment fields.');
+          return;
+        }
+        if (!paymentInput.value) {
+          alert('Please select a payment method.');
+          return;
+        }
+
+        alert('Order placed successfully! Thank you.');
+        localStorage.setItem('cart', JSON.stringify([]));
+        window.location.href = 'index.html';
+      });
+    });
+  </script>
+
 </body>
 </html>
