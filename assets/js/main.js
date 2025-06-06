@@ -86,6 +86,12 @@ function createProductCard(product) {
     addToCart(product.id);
   });
 
+  // Add event listener for View button
+  const viewBtn = card.querySelector('.view-btn');
+  viewBtn.addEventListener('click', () => {
+    window.location.href = `product-detail.html?id=${product.id}`;
+  });
+
   return card;
 }
 
