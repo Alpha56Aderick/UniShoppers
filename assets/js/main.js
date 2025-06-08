@@ -71,7 +71,7 @@ function createProductCard(product) {
     <div class="product-image" style="background-image: url('${product.image}')"></div>
     <div class="product-info">
       <h3>${product.name}</h3>
-      <p class="price">$${product.price.toFixed(2)}</p>
+      <p class="price">Tsh${product.price.toFixed(2)}</p>
       <p class="category">${formatCategory(product.category)}</p>
       <div class="button-group">
         <button class="btn add-to-cart-btn" data-product-id="${product.id}">Add to Cart</button>
@@ -148,7 +148,7 @@ function loadProductDetails() {
     const product = products.find(p => p.id === productId);
     if (product) {
       document.getElementById('product-title').textContent = product.name;
-      document.getElementById('product-price').textContent = `$${product.price.toFixed(2)}`;
+      document.getElementById('product-price').textContent = `Tsh${product.price.toFixed(2)}`;
       document.getElementById('product-description').textContent = product.description;
       document.getElementById('main-image').src = product.image;
       
