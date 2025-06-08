@@ -47,7 +47,7 @@ const products = [
     description: "Free access to premium developer tools for students",
     category: "software",
     subcategory: "developer-tools",
-    image: "assets/images/github-pack.jpg",
+    image: "assets/images/git pack.png",
     tags: ["computer-science", "free"]
   },
   // B. Civil Engineering
@@ -58,7 +58,7 @@ const products = [
     description: "Complete set with compass, protractor, and technical pens",
     category: "workshop-tools",
     subcategory: "drafting",
-    image: "assets/images/drafting-kit.jpg",
+    image: "assets/images/drawing board.png",
     tags: ["civil-engineering"]
   },
   {
@@ -78,7 +78,7 @@ const products = [
     description: "Free 1-year license for civil engineering students",
     category: "software",
     subcategory: "cad",
-    image: "assets/images/autocad-civil.jpg",
+    image: "assets/images/auto card.png",
     tags: ["civil-engineering", "free"]
   },
   {
@@ -94,9 +94,9 @@ const products = [
   // C. Laboratory Science
   {
     id: 10,
-    name: "Lab Coat (Polyester Cotton)",
-    price: 25000,
-    description: "White lab coat with knit cuffs and snap buttons",
+    name: "Displaceable gloves",
+    price: 75000,
+    description: "Full box of disposable gloves for lab safety",
     category: "lab-requirements",
     subcategory: "safety",
     image: "assets/images/lab coat.jpeg",
@@ -129,7 +129,7 @@ const products = [
     description: "126-piece organic chemistry modeling set",
     category: "reference-materials",
     subcategory: "kits",
-    image: "assets/images/molecular-kit.jpg",
+    image: "assets/images/molecular model kit.jpeg",
     tags: ["laboratory-science"]
   },
   // D. Mechanical Engineering
@@ -150,7 +150,7 @@ const products = [
     description: "1-year license for mechanical design software",
     category: "software",
     subcategory: "cad",
-    image: "assets/images/solidworks.jpg",
+    image: "assets/images/solid works.png",
     tags: ["mechanical-engineering"]
   },
   {
@@ -181,7 +181,7 @@ const products = [
     description: "Auto-ranging multimeter with continuity test",
     category: "electronic-tools",
     subcategory: "measurement",
-    image: "assets/images/multimeter.jpg",
+    image: "assets/images/multimeter.jpeg",
     tags: ["electrical-electronics"]
   },
   {
@@ -191,7 +191,7 @@ const products = [
     description: "Includes Uno board, sensors, and tutorial",
     category: "electronic-tools",
     subcategory: "kits",
-    image: "assets/images/arduino-kit.jpg",
+    image: "assets/images/arduino kit.jpeg",
     tags: ["electrical-electronics"]
   },
   {
@@ -201,7 +201,7 @@ const products = [
     description: "60W adjustable temperature soldering kit",
     category: "electronic-tools",
     subcategory: "tools",
-    image: "assets/images/soldering-station.jpg",
+    image: "assets/images/soldering iron station.jpeg",
     tags: ["electrical-electronics"]
   },
   {
@@ -211,7 +211,7 @@ const products = [
     description: "Assorted lengths for circuit prototyping",
     category: "electronic-tools",
     subcategory: "components",
-    image: "assets/images/jumper-wires.jpg",
+    image: "assets/images/jumper wires.jpeg",
     tags: ["electrical-electronics"]
   }
 ];
