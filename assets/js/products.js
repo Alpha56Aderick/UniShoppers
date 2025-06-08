@@ -17,7 +17,7 @@ const products = [
     description: "A white coat for laboratory safety",
     category: "lab-requirements",
     subcategory: "safety",
-    image: "assets/images/lab coat.jpg",
+    image: "assets/images/lab coat.jpeg",
     tags: ["laboratory-science"]
   },
   {
@@ -27,7 +27,7 @@ const products = [
     description: "Tenkeyless mechanical keyboard with RGB lighting for programmers",
     category: "computers",
     subcategory: "accessories",
-    image: "assets/images/mech-keyboard.jpg",
+    image: "assets/images/keyboard.jpeg",
     tags: ["computer-science"]
   },
   {
@@ -37,7 +37,7 @@ const products = [
     description: "Complete IoT development kit with case, power supply and accessories",
     category: "electronic-tools",
     subcategory: "kits",
-    image: "assets/images/rasberry-pi-kit.jpg",
+    image: "assets/images/rasberry pi kit.png",
     tags: ["computer-science", "electronics"]
   },
   {
@@ -68,7 +68,7 @@ const products = [
     description: "ANSI-approved safety helmet with adjustable harness",
     category: "safety-gear",
     subcategory: "construction",
-    image: "assets/images/hard-hat.jpg",
+    image: "assets/images/construction hat.jpeg",
     tags: ["civil-engineering"]
   },
   {
@@ -88,7 +88,7 @@ const products = [
     description: "Digital laser measure with 100ft range for site surveys",
     category: "workshop-tools",
     subcategory: "measurement",
-    image: "assets/images/laser-measurer.jpg",
+    image: "assets/images/laser measurer.jpeg",
     tags: ["civil-engineering"]
   },
   // C. Laboratory Science
@@ -99,7 +99,7 @@ const products = [
     description: "White lab coat with knit cuffs and snap buttons",
     category: "lab-requirements",
     subcategory: "safety",
-    image: "assets/images/lab-coat.jpg",
+    image: "assets/images/lab coat.jpeg",
     tags: ["laboratory-science"]
   },
   {
@@ -109,7 +109,7 @@ const products = [
     description: "24-piece set with beakers, flasks and graduated cylinders",
     category: "lab-requirements",
     subcategory: "glassware",
-    image: "assets/images/glassware-set.jpg",
+    image: "assets/images/chem gkassware.jpeg",
     tags: ["laboratory-science"]
   },
   {
@@ -119,7 +119,7 @@ const products = [
     description: "Precision pH tester with ATC and replaceable electrode",
     category: "lab-requirements",
     subcategory: "instruments",
-    image: "assets/images/ph-meter.jpg",
+    image: "assets/images/ph meter.jpeg",
     tags: ["laboratory-science"]
   },
   {
@@ -140,7 +140,7 @@ const products = [
     description: "Stainless steel vernier caliper with LCD display",
     category: "workshop-tools",
     subcategory: "measurement",
-    image: "assets/images/digital-caliper.jpg",
+    image: "assets/images/caliper.jpeg",
     tags: ["mechanical-engineering"]
   },
   {
@@ -160,7 +160,7 @@ const products = [
     description: "1.75mm diameter filament for prototyping",
     category: "workshop-tools",
     subcategory: "3d-printing",
-    image: "assets/images/pla-filament.jpg",
+    image: "assets/images/printing filament.jpeg",
     tags: ["mechanical-engineering"]
   },
   {
@@ -170,7 +170,7 @@ const products = [
     description: "Complete heat transfer experiment set",
     category: "lab-requirements",
     subcategory: "mechanical",
-    image: "assets/images/thermo-kit.jpg",
+    image: "assets/images/thermodynamic lab kit.jpeg",
     tags: ["mechanical-engineering"]
   },
   // E. Electrical & Electronics
