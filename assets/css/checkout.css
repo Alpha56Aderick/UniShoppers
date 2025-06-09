@@ -1,4 +1,7 @@
-
+.checkouts {
+  text-align: center;
+  margin-bottom: 2rem;
+}
 .checkout {
   display: flex;
   gap: 2rem;
