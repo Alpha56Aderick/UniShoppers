@@ -85,7 +85,7 @@
 .cart-item-quantity {
   display: flex;
   flex-direction: column;
-  align-items: flex-end; /* 👈 key change: aligns right */
+  align-items: flex-end; 
   gap: 8px;
 }
 
@@ -121,7 +121,7 @@
   width: 100% !important;
   height: 36px;
   padding: 0.5rem;
-  background-color: #5A827E!important;
+  background-color: #dd2f2f!important;
   color: #fff !important;
   border: none;
   border-radius: 6px;
